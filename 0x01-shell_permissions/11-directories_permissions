@@ -1,2 +1,2 @@
-#!/bini/bash
+#!/bin/bash
 chmod a+X *
