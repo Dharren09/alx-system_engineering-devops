@@ -1,1 +1,1 @@
-Don't just count your directories, make your directories count
+Being unique is better than being perfect
