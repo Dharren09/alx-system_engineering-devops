@@ -1,2 +1,2 @@
 #!/bin/bash
-head 3 iacta | touch iacta
+touch iacta | head -3 iacta
