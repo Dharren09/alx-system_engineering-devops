@@ -1,1 +1,1 @@
-Transfer a file to your server
+Install Nginx web server (w/ Puppet)
