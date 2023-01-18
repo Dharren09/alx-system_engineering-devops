@@ -1,18 +1,8 @@
-#puppet advance
-exec {'update:
-  command  => 'sudo apt-get update',
-  provider => shell,
-}
--> package {'nginx':
-  ensure => present,
-}
--> file_line {'header line':
-  ensure => '/etc/nginx/sites-available/default',
-  line   => location / {
-  add_header X-Served-By ${hostname};",
-  match  => '^\tlocation / {',
-}
--> exec { 'restart service':
-  command  => 'sudo service nginx restart',
+# creates a custom HTTP header response
+exec { 'command':
+  command  => 'apt-get -y update;
+  apt-get -y install nginx;
+  sudo sed -i "/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default;
+  service nginx restart',
   provider => shell,
 }
