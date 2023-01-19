@@ -8,14 +8,14 @@
 #+    Contains a custom HTTP header named X-Served-By.
 #+    The value of the HTTP header is the hostname of the running server.
 
-apt-get update
-apt-get install -y nginx
+sudo apt-get update
+sudo apt-get install -y nginx
 
 mkdir -p /var/www/html
 touch /var/www/html/index.html
-echo "Hello World" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 touch /var/www/html/404.html
-echo "Ceci n'est pas une page" > /var/www/html/404.html
+echo "Page not found" > /var/www/html/404.html
 
 printf %s "server {
     listen 80 default_server;
@@ -33,4 +33,4 @@ printf %s "server {
     }
 }" > /etc/nginx/sites-available/default
 
-service nginx restart
+sudo service nginx restart
