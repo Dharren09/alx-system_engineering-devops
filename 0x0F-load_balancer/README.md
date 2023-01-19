@@ -1,1 +1,1 @@
-Double the number of webservers
+Install your load balancer
