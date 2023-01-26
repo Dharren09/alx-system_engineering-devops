@@ -1,1 +1,1 @@
-No loophole in your website traffic
+HAproxy SSL termination
