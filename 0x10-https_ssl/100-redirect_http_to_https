@@ -46,7 +46,7 @@ frontend loadbalancer
         default_backend webservers
 
 frontend loadbalancerssl
-	bind *:443 ssl crt /etc/haproxy/certs/iamdharrenzug.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/techaccess.tech.pem
 	http-request set-header X-Forwarded-Proto https if { ssl_fc }
 	acl letsencrypt-acl path_beg /.well-known/acme-challenge/
 	use_backend letsencrypt-backend if letsencrypt-acl

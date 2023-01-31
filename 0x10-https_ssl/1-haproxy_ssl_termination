@@ -39,7 +39,7 @@ defaults
 frontend loadbalancer
         mode http
         bind *:80
-        bind *:443 ssl crt /etc/haproxy/certs/iamdharrenzug.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/techaccess.tech.pem
         http-request redirect scheme https code 301 unless { ssl_fc }
         default_backend webservers
         http-request set-header X-Forwarded-Proto https if { ssl_fc }
@@ -50,7 +50,7 @@ frontend loadbalancer
 backend webservers
         balance roundrobin
         redirect scheme https if !{ ssl_fc }
-        server 70974-web-01 100.26.120.253 check
-        server 70974-web-02 100.26.216.235 check
+        server 67572-web-01 100.26.120.253:80 check
+        server 67572-web-02 100.26.216.235:80 check
 backend letsencrypt-backend
         server letsencrypt 52.87.220.82:54321
