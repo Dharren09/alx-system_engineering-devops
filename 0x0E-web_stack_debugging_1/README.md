@@ -1,1 +1,1 @@
-make it sweet and short
+Nginx likes port 80
