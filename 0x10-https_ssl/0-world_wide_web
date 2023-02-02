@@ -4,17 +4,11 @@
 if [ "$#" -eq 1 ];
 then
 	subdomain=("www" "lb-01" "web-01" "web-02")
-<<<<<<< HEAD
-        for i in "${subdomain[@]}"
-        do
-	dig "$i"."$1"| grep -A1 'ANSWER SECTION:' | awk 'NR==2{SUB=$1; REC=$4; DEST=$5; split(SUB, subx, "."); print "The subdomain" subx[1], "is a "REC, "record and points to" DEST}';
-=======
 	for i in "${subdomain[@]}"
 	do
-	dig "$i"."$1"| grep -A1 'ANSWER SECTION:' | awk 'NR==2{SUB=$1; REC=$4; DEST=$5; split(SUB, subx, "."); print "The subdomain " subx[1], "is a " REC, "record and points to " DEST}';
->>>>>>> 23089c00ecc4e270b76e1af974e100abadc4193b
+		dig "$i"."$1"| grep -A1 'ANSWER SECTION:' | awk 'NR==2{SUB=$1; REC=$4; DEST=$5; split(SUB, subx, "."); print "The subdomain " subx[1], "is a " REC, "record and points to " DEST}';
 	done
-elif [ "$#" -eq 2 ];
+elif [ "$#" -eq 2];
 then
-	dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | awk 'NR==2{SUB=$1; REC=$4; DEST=$5; split(SUB, subx, "."); print "The subdomain" subx[1], "is a" REC, "record and points to" DEST}';
+	dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | awk 'NR==2{SUB=$1; REC=$4; DEST=$5; split(SUB, subx, "."); print "The subdomain " subx[1], "is a " REC, "record and points to " DEST}';
 fi
