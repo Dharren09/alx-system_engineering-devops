@@ -10,14 +10,14 @@ apt-get -y install haproxy
 # Configure frontend & Backend
 configString=\
 "
-frontend techaccess-frontend
-        bind *:80
-        mode http
-        default_backend techaccess-backend
-backend techaccess-backend
+frontend iamdharrenzug-frontend
+         bind *:80
+         mode http
+         default_backend iamdharrenzug-backend
+backend iamdharrenzug-backend
         balance roundrobin
-        server 70974-web-01 100.26.120.253:80 check
-        server 68701-web-02 100.26.216.235:80 check
+        server 67572-web-01 54.175.69.64:80 check
+        server 67572-web-02 35.175.63.85:80 check
 "
 echo "$configString" | sudo tee -a /etc/haproxy/haproxy.cfg
 
