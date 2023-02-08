@@ -1,1 +1,1 @@
-Gather data from an API
+Dictionary of list of dictionaries
