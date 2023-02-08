@@ -2,7 +2,8 @@
 
 """Returns information about employee TODO list progress"""
 
-import requestd
+import requests
+
 
 def get_employee_todo_progress(employee_id):
     # URL for API endpoint
@@ -11,10 +12,10 @@ def get_employee_todo_progress(employee_id):
     # Get the response from the API
     response = requests.get(url)
 
-    #Check if response was successful
+    # Check if response was successful
     if response.status_code == 200:
 
-        #Get the JSON data from the response
+        # Get the JSON data from the response
         data = response.json()
 
         # Count the number of completed tasks
@@ -23,8 +24,8 @@ def get_employee_todo_progress(employee_id):
 
         # Get the employee name
         employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
-        employee_response = requests.get(employee_url)
-        employee_data = employee_response,json()
+        employee_response = requests.get(url)
+        employee_data = employee_response.json()
         employee_name = employee_data["name"]
 
         # Print the results
