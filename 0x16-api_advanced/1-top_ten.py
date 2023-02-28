@@ -11,7 +11,8 @@ def top_ten(subreddit):
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     parameter = {"limit": 10}
-    response = requests.get(url, headers=headers, params=parameter, allow_redirects=False)
+    response = requests.get(url, headers=headers, params=parameter,
+                            allow_redirects=False)
     if response.status_code == 404:
         print("None")
         return
