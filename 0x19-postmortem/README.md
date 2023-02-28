@@ -1,5 +1,5 @@
 #MY FIRST POSTMORTEM#
-![image](https://user-images.githubusercontent.com/107412228/221952383-9b381153-5a26-4cd7-b35d-d0a3051b1fb1.png)
+[image](https://user-images.githubusercontent.com/107412228/221952383-9b381153-5a26-4cd7-b35d-d0a3051b1fb1.png)
 
 
 
@@ -10,11 +10,11 @@
 
 
 
-#*Server Error Information*#
+# *Server Error Information*
 
 On February 22, 2023, our Hospital Management System website experienced a total meltdown that left our users feeling as frustrated as a cat trying to catch a laser pointer. The meltdown occurred between the hours of 9:00 PM and 11:30 PM EST, affecting 61% of our users. During this time, users were unable to browse the website, manage inventory and the patients could not access their medical information. As a result, we experienced a 40% cut in sales and overall client reviews and our CEO's hairline receded by an inch.
-
-/#Timeline*#
+ 
+# *Timeline*
 
 9:00 PM: Our monitoring system alerted us to increased error rates and server latency. Our engineering team frantically searched for the root cause, but it was as elusive as a greased pig in a mud pit.
 9:05 PM: We realized we were in deep trouble when our CEO called and demanded to know what was going on. We quickly blamed the issue on aliens.
@@ -25,12 +25,12 @@ On February 22, 2023, our Hospital Management System website experienced a total
 11:00 PM: The database was successfully restored, and we felt a glimmer of hope. We celebrated with a virtual happy hour and drank until we forgot about the incident.
 11:30 PM: The website was fully restored, and we were finally able to breathe a sigh of relief. Our CEO's hairline even grew back a millimeter.
 
-#*Root Cause and Resolution*#
+# *Root Cause and Resolution*
 
 The root cause of the issue was a corrupt database file that caused the primary database server to fail. The database administration team resolved the issue by restoring from a backup. We promised to take better care of our database and provide it with regular checkups and emotional support.
 
 
-#*Corrective and Preventative Measures*#
+# *Corrective and Preventative Measures*
 
 To prevent similar issues in the future, we will be implementing the following measures:
 Improve database monitoring to detect and alert us of potential issues before they become critical.
