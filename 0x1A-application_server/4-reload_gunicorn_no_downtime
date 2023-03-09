@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+sudo kill -SIGUSR2 $(pgrep gunicorn | head -n 1)
+
+echo "Gunicorn reloaded gracefully"
